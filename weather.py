@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 
 # API key from OpenWeatherMap
-API_KEY = "d7743a5b796a220963fceab06d718ef7"  # Replace with your OpenWeatherMap API key
+API_KEY = "d7743a5b796a220963fceab06d718ef7"  
 
 def get_weather(city):
     # URL to get weather data from OpenWeatherMap API
@@ -13,7 +13,7 @@ def get_weather(city):
     
     # If the response status code is 200 (OK)
     if response.status_code == 200:
-        data = response.json()  # Parse the JSON response
+        data = response.json()  
         
         # Extracting required information
         city_name = data['name']
@@ -37,6 +37,6 @@ def get_weather(city):
     else:
         print("City not found, please check the name and try again.")
 
-# Ask the user for the city name
+
 city = input("Enter the city name: ")
 get_weather(city)
